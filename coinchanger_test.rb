@@ -12,4 +12,7 @@ class Testallconversions < Minitest::Test
     def test_for_2_pennys
         assert_equal({:quarter => 2}, coin_counter(50))
     end
-end
+    def test_for_1_queater_1_dime
+    assert_equal({:quarter=>1, :dime=>1}, coin_counter(35))
+    end
+end 
