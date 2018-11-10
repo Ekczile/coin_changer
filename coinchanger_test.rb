@@ -33,4 +33,7 @@ class Testallconversions < Minitest::Test
     def test_really_big_number
         assert_equal({:quarter=>22436000, :pennys=>2},coin_counter(560900002))
     end
+    def test_for_string_or_symbols
+        assert_equal("Please use Integers only.",coin_counter("can you change this?"))
+    end
 end 
