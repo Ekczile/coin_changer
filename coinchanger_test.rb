@@ -21,4 +21,7 @@ class Testallconversions < Minitest::Test
     def test_for_1_quarter_1_dime_and_1_nickle
         assert_equal({:quarter=> 1, :dime=> 1, :nickle=> 1},coin_counter(40))
     end
+    def test_for_2_quarter_1_dime_and_1_nickle
+        assert_equal({:quarter => 2, :dime => 1, :nickle => 1},coin_counter(65))
+    end
 end 

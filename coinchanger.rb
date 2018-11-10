@@ -13,7 +13,7 @@ def coin_counter(coins)
     if coins >= 5
         nickle = coins / 5
         hash.merge!(:nickle => nickle)
-        coins -= dime * 5
+        coins -= nickle * 5
     end
     p hash
     return hash
