@@ -30,4 +30,7 @@ class Testallconversions < Minitest::Test
     def test_first_big_num
         assert_equal({:quarter=>108000},coin_counter(2700000))
     end
+    def test_really_big_number
+        assert_equal({:quarter=>22436000, :pennys=>2},coin_counter(560900002))
+    end
 end 
