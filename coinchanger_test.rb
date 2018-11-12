@@ -19,13 +19,13 @@ class Testallconversions < Minitest::Test
         assert_equal({:quarters=> 2, :dimes=> 2}, coin_counter(70))
     end
     def test_for_1_quarters_1_dime_and_1_nickle
-        assert_equal({:quarters=> 1, :dimes=> 1, :nickle=> 1},coin_counter(40))
+        assert_equal({:quarters=> 1, :dime=> 1, :nickle=> 1},coin_counter(40))
     end
     def test_for_2_quarters_1_dime_and_1_nickle
-        assert_equal({:quarters => 2, :dimes => 1, :nickle => 1},coin_counter(65))
+        assert_equal({:quarters => 2, :dime => 1, :nickle => 1},coin_counter(65))
     end
     def test_for_2_quarters_1_dime__1_nickle_and_4_pennys
-        assert_equal({:quarters => 2, :dimes => 1, :nickle => 1, :pennys => 4},coin_counter(69))
+        assert_equal({:quarters => 2, :dime => 1, :nickle => 1, :pennys => 4},coin_counter(69))
     end
     def test_first_big_num
         assert_equal({:quarters=>108000},coin_counter(2700000))
@@ -44,5 +44,8 @@ class Testallconversions < Minitest::Test
     end
     def test_for_2d
         assert_equal({:dimes=>2},coin_counter(20))
+    end
+    def test_for_float
+        assert_equal("Please use Integers only.",coin_counter(25.5))
     end
 end 
