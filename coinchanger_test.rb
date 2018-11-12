@@ -13,7 +13,7 @@ class Testallconversions < Minitest::Test
         assert_equal({:quarters => 2}, coin_counter(50))
     end
     def test_for_1_quarters_1_dime
-        assert_equal({:quarters=> 1, :dimes=> 1}, coin_counter(35))
+        assert_equal({:quarters=> 1, :dime=> 1}, coin_counter(35))
     end
     def test_for_2_quarterss_2_dimes
         assert_equal({:quarters=> 2, :dimes=> 2}, coin_counter(70))
@@ -41,5 +41,8 @@ class Testallconversions < Minitest::Test
     end
     def test_for_1q_1p
         assert_equal({:quarters=>1, :penny=>1},coin_counter(26))
+    end
+    def test_for_2d
+        assert_equal({:dimes=>2},coin_counter(20))
     end
 end 
