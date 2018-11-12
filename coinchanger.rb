@@ -3,12 +3,12 @@ def coin_counter(coins)
     if coins.class == Integer
         if coins >= 25
             quarter = coins / 25
-            hash.merge!(:quarter => quarter)
+            hash.merge!(:quarters => quarter)
             coins -= quarter * 25
         end
         if coins >= 10
             dime = coins / 10
-            hash.merge!(:dime => dime)
+            hash.merge!(:dimes => dime)
             coins -= dime * 10
         end
         if coins >= 5
@@ -16,7 +16,11 @@ def coin_counter(coins)
             hash.merge!(:nickle => nickle)
             coins -= nickle * 5
         end
-        if coins >= 1
+        if coins == 1
+            pennys = coins / 1
+            hash.merge!(:penny => pennys)
+            coins -= pennys * 1
+        elsif coins >= 1
             pennys = coins / 1
             hash.merge!(:pennys => pennys)
             coins -= pennys * 1
